@@ -1,15 +1,16 @@
 // load modules
-const express = require("express");
-const cors = require("cors");
-const port = process.env.PORT || 4001; 
-const controller = require("./controller");
+const express = require('express');
+const cors = require('cors');
 
-const app = express(); 
-app.use(cors()); //enable cors
+const port = process.env.PORT || 4001;
+const controller = require('./controller');
+
+const app = express();
+app.use(cors()); // enable cors
 app.use(express.json()); // recognize request objects as JSON
 
-//test route
-app.get("/", controller.testRoute);
+// test route
+app.get('/', controller.testRoute);
 
 // server listening
 app.listen(port, () => {
