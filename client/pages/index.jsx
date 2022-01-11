@@ -2,19 +2,20 @@ import Head from 'next/head';
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Mynavbar } from './components/Mynavbar.component';
+import MyTable from './components/MyTable';
 
 export default function Home() {
-  const [result, setResult] = useState('');
+  const [products, setProducts] = useState([]);
 
-  // search for data
-  const search = async () => {
-    const res = await axios.get('http://localhost:4001');
-    // console.log('results', res.data);
-    setResult(res.data);
+  // get all products
+  const getProducts = () => {
+    axios.get('http://localhost:4001/api/getproducts').then((res) => {
+      setProducts(res.data);
+    });
   };
 
   useEffect(() => {
-    search();
+    getProducts();
   }, []);
 
   return (
@@ -26,10 +27,9 @@ export default function Home() {
       </Head>
 
       <Mynavbar />
-      <main>
-        hi heres a :
-        <br />
-        {result}
+      <main className="mx-5 my-5">
+        <h3>Products Inventory</h3>
+        <MyTable products={products} />
       </main>
 
     </div>
