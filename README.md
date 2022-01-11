@@ -12,9 +12,3 @@ Technologies:
 
 * Express
 
-
-Data Model:
-
-Inventory item -
-
-Columns: Date created, Name, Description, Quantity, Price, Image URL
