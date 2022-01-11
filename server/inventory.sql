@@ -15,3 +15,4 @@ VALUES
   ('50L Backpack', 59.99, 20),
   ('Yeti Tumbler', 29.99, 100),
   ('Yeti Cooler', 249.99, 30);
+

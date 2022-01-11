@@ -1,5 +1,6 @@
 const pool = require('./db');
 
+// test route
 const testRoute = (req, res) => {
   res.status(200).send('Test route working!');
 };
