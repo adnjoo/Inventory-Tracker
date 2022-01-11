@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
-import { Mynavbar } from './components/Mynavbar.component';
-import MyTable from './components/MyTable';
+import MyNavBar from './components/MyNavBar.component';
+import MyTable from './components/MyTable.component';
+import CreateProducts from './components/CreateProducts.component';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -26,10 +27,12 @@ export default function Home() {
         <link rel="icon" href="/truck.png" />
       </Head>
 
-      <Mynavbar />
+      <MyNavBar />
       <main className="mx-5 my-5">
         <h3>Products Inventory</h3>
         <MyTable products={products} />
+
+        <CreateProducts />
       </main>
 
     </div>
