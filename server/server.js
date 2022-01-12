@@ -12,6 +12,10 @@ app.use(express.json());
 // test route
 app.get('/', controller.testRoute);
 
+// create
+app.post('/api/addproduct', controller.addProduct);
+
+// read
 app.get('/api/getproducts', controller.getProducts);
 
 // server listening

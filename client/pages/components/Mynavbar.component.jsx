@@ -4,7 +4,7 @@ import { Navbar, Container } from 'react-bootstrap';
 export default function MyNavBar() {
   return (
     <div>
-      <Navbar bg="light" variant="light">
+      <Navbar bg="light" variant="light" className="mx-3">
         <Container>
           <Navbar.Brand href="#home">Inventory Tracker</Navbar.Brand>
           <Navbar.Toggle />

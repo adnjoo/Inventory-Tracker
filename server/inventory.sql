@@ -3,12 +3,12 @@ CREATE TABLE products (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   price DECIMAL(6, 2) NOT NULL,
-  inventory INTEGER NOT NULL
+  quantity INTEGER NOT NULL
 );
 
 -- Data Insertion
 INSERT INTO
-  products (name, price, inventory)
+  products (name, price, quantity)
 VALUES
   ('Mountain Bike', 199.99, 25),
   ('Surfboard', 299.99, 30),

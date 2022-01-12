@@ -3,7 +3,7 @@ import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import MyNavBar from './components/MyNavBar.component';
 import MyTable from './components/MyTable.component';
-import CreateProducts from './components/CreateProducts.component';
+import AddProduct from './components/AddProduct.component';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -29,10 +29,10 @@ export default function Home() {
 
       <MyNavBar />
       <main className="mx-5 my-5">
-        <h3>Products Inventory</h3>
+        <h3>Products</h3>
         <MyTable products={products} />
-
-        <CreateProducts />
+        <br />
+        <AddProduct getProducts={getProducts} />
       </main>
 
     </div>

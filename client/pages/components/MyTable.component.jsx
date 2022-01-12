@@ -9,7 +9,7 @@ export default function MyTable({ products }) {
           <th>ID</th>
           <th>Name</th>
           <th>Price</th>
-          <th>Inventory</th>
+          <th>Quantity</th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +25,7 @@ export default function MyTable({ products }) {
               {item.price}
             </td>
             <td>
-              {item.inventory}
+              {item.quantity}
             </td>
           </tr>
         ))}
