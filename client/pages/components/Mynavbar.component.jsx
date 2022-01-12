@@ -3,10 +3,19 @@ import { Navbar, Container } from 'react-bootstrap';
 
 export default function MyNavBar() {
   return (
-    <div>
-      <Navbar bg="light" variant="light" className="mx-3">
+    <div className="mx-5">
+      <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">Inventory Tracker</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img
+              src="/truck.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="Truck logo"
+            />
+            &nbsp;&nbsp;Inventory Tracker
+          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>

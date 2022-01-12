@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { EditProduct } from './EditProduct.component';
 
 export default function MyTable({ products }) {
   return (
@@ -10,6 +11,7 @@ export default function MyTable({ products }) {
           <th>Name</th>
           <th>Price</th>
           <th>Quantity</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -26,6 +28,12 @@ export default function MyTable({ products }) {
             </td>
             <td>
               {item.quantity}
+            </td>
+            <td>
+              <EditProduct
+                inputId={item.id}
+              />
+              | delete
             </td>
           </tr>
         ))}

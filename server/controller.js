@@ -18,6 +18,19 @@ const getProducts = (req, res) => {
   }
 };
 
+// Get product by id
+const getProductById = (req, res) => {
+  try {
+    pool
+      .query('SELECT * FROM products WHERE id = $1;', [req.body.id])
+      .then((results) => {
+        res.status(200).send(results);
+      });
+  } catch (e) {
+    console.log('error', e);
+  }
+};
+
 // Add a new product
 const addProduct = (req, res) => {
   try {
@@ -34,8 +47,11 @@ const addProduct = (req, res) => {
   }
 };
 
+// Edit product
+
 module.exports = {
   testRoute,
   getProducts,
+  getProductById,
   addProduct,
 };

@@ -18,6 +18,9 @@ app.post('/api/addproduct', controller.addProduct);
 // read
 app.get('/api/getproducts', controller.getProducts);
 
+// get product by id
+app.post('/api/getproductbyid', controller.getProductById);
+
 // server listening
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);

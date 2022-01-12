@@ -14,7 +14,6 @@ export default function AddProduct({ getProducts }) {
       price,
       quantity,
     }).then(() => {
-      // console.log(res);
       getProducts();
     });
   };
@@ -24,7 +23,7 @@ export default function AddProduct({ getProducts }) {
       <h3>Add a product</h3>
       <Form.Group className="mb-3" controlId="name">
         <Form.Label>Name</Form.Label>
-        <Form.Control className="w-50" type="text" placeholder="Name" onChange={(e) => setName(e.target.value.toString())} />
+        <Form.Control className="w-50" type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />
       </Form.Group>
       <Form.Group className="mb-3" controlId="price">
         <Form.Label>Price</Form.Label>

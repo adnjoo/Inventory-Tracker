@@ -29,10 +29,12 @@ export default function Home() {
 
       <MyNavBar />
       <main className="mx-5 my-5">
-        <h3>Products</h3>
-        <MyTable products={products} />
-        <br />
-        <AddProduct getProducts={getProducts} />
+        <div className="mx-5">
+          <h3>Products</h3>
+          <MyTable products={products} />
+          <br />
+          <AddProduct getProducts={getProducts} />
+        </div>
       </main>
 
     </div>
