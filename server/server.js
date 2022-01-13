@@ -1,4 +1,4 @@
-// load modules
+// Load modules
 const express = require('express');
 const cors = require('cors');
 
@@ -9,19 +9,25 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// test route
+// Test route
 app.get('/', controller.testRoute);
 
-// create
+// Create
 app.post('/api/addproduct', controller.addProduct);
 
-// read
+// Read
 app.get('/api/getproducts', controller.getProducts);
 
-// get product by id
+// Get product by id
 app.post('/api/getproductbyid', controller.getProductById);
 
-// server listening
+// Edit product
+app.put('/api/editproduct', controller.editProduct);
+
+// Delete product
+app.delete('/api/deleteproduct', controller.deleteProduct);
+
+// Server listening
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);
 });

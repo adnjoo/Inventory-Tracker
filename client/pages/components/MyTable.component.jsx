@@ -1,8 +1,9 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { EditProduct } from './EditProduct.component';
+import { DeleteProduct } from './DeleteProduct.component';
 
-export default function MyTable({ products }) {
+export default function MyTable({ products, getProducts }) {
   return (
     <Table striped bordered hover>
       <thead>
@@ -31,9 +32,12 @@ export default function MyTable({ products }) {
             </td>
             <td>
               <EditProduct
-                inputId={item.id}
+                productData={item}
+                getProducts={getProducts}
               />
-              | delete
+
+              {' '}
+              <DeleteProduct productId={item.id} getProducts={getProducts} />
             </td>
           </tr>
         ))}

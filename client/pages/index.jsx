@@ -31,7 +31,7 @@ export default function Home() {
       <main className="mx-5 my-5">
         <div className="mx-5">
           <h3>Products</h3>
-          <MyTable products={products} />
+          <MyTable products={products} getProducts={getProducts} />
           <br />
           <AddProduct getProducts={getProducts} />
         </div>

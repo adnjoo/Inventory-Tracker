@@ -14,5 +14,15 @@ VALUES
   ('Surfboard', 299.99, 30),
   ('50L Backpack', 59.99, 20),
   ('Yeti Tumbler', 29.99, 100),
-  ('Yeti Cooler', 249.99, 30);
+  ('Yeti Cooler', 249.99, 30),
+  ('Popsicle', 1.99, 100),
+  ('Granola Bar', 2.99, 200),
+  ('Chocolate Bar', 3.29, 300),
+  ('Fruit Cake', 9.99, 20);
 
+-- Reset id column
+ALTER TABLE products
+  DROP id;
+
+ALTER TABLE products
+  ADD id SERIAL PRIMARY KEY; 

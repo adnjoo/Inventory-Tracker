@@ -3,15 +3,29 @@ import axios from 'axios';
 import { Button, Modal, Form } from 'react-bootstrap';
 
 function MyVerticallyCenteredModal(props) {
+  const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [quantity, setQuantity] = useState('');
 
   useEffect(() => {
-    setName(props?.data.name);
-    setPrice(props?.data.price);
-    setQuantity(props?.data.quantity);
+    setId(props.data.id);
+    setName(props.data.name);
+    setPrice(props.data.price);
+    setQuantity(props.data.quantity);
   }, []);
+
+  const handleSubmit = () => {
+    axios.put('http://localhost:4001/api/editproduct', {
+      id,
+      name,
+      price,
+      quantity,
+    }).then(() => {
+      props.getProducts();
+      props.setModalShow(false);
+    });
+  };
 
   return (
     <Modal
@@ -23,13 +37,11 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Edit product
+          {' '}
+          {id}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h3>
-          Product Id:&nbsp;
-          {props?.data.id}
-        </h3>
         <div>
           <Form>
             <Form.Group className="mb-3" controlId="name">
@@ -44,43 +56,35 @@ function MyVerticallyCenteredModal(props) {
               <Form.Label>Quantity</Form.Label>
               <Form.Control className="w-50" type="number" step="1" defaultValue={quantity} onChange={(e) => setQuantity(e.target.value)} />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
           </Form>
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button
+          variant="primary"
+          type="button"
+          onClick={handleSubmit}
+        >
+          Submit
+        </Button>
       </Modal.Footer>
     </Modal>
   );
 }
 
-export function EditProduct({ inputId }) {
-  const [data, setData] = useState([]);
+export function EditProduct({ productData, getProducts }) {
   const [modalShow, setModalShow] = useState(false);
-
-  const getProductById = (input) => {
-    axios.post('http://localhost:4001/api/getproductbyid', {
-      id: input,
-    }).then((res) => {
-      setData(res.data.rows[0]);
-    });
-  };
-
-  useEffect(() => {
-    getProductById(inputId);
-  }, []);
 
   return (
     <>
-      <Button variant="warning" onClick={() => setModalShow(true)}>edit</Button>
+      <Button variant="info" onClick={() => setModalShow(true)}>Edit</Button>
 
       <MyVerticallyCenteredModal
-        data={data}
+        data={productData}
         show={modalShow}
+        setModalShow={setModalShow}
         onHide={() => setModalShow(false)}
+        getProducts={getProducts}
       />
     </>
   );
