@@ -12,3 +12,4 @@ Technologies:
 
 * Express
 
+* Cypress (E2E testing)

@@ -21,7 +21,7 @@ export default function MyNavBar() {
             <Navbar.Text>
               created by:
               {' '}
-              <a href="https://github.com/adnjoo/backend-challenge" target="_blank" rel="noreferrer">adnjoo</a>
+              <a href="https://github.com/adnjoo/backend-challenge" target="_blank" rel="noreferrer" data-cy="nav-item">adnjoo</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>
