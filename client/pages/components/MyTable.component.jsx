@@ -37,7 +37,11 @@ export default function MyTable({ products, getProducts }) {
               />
 
               {' '}
-              <DeleteProduct productId={item.id} getProducts={getProducts} />
+              <DeleteProduct
+                productName={item.name}
+                productId={item.id}
+                getProducts={getProducts}
+              />
             </td>
           </tr>
         ))}

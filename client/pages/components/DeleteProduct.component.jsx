@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
-export function DeleteProduct({ productId, getProducts }) {
+export function DeleteProduct({ productId, productName, getProducts }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,9 +25,13 @@ export function DeleteProduct({ productId, getProducts }) {
           <Modal.Title />
         </Modal.Header>
         <Modal.Body>
-          Are you sure you want to delete product
+          Are you sure you want to delete Product
           {' '}
           {productId}
+          {' '}
+          -
+          {' '}
+          {productName}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClick}>
