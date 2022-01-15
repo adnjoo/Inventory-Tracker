@@ -27,6 +27,9 @@ app.put('/api/editproduct', controller.editProduct);
 // Delete product
 app.delete('/api/deleteproduct', controller.deleteProduct);
 
+// Export table
+app.get('/api/download', controller.downloadProducts);
+
 // Server listening
 app.listen(port, () => {
   console.log(`Serving on port ${port}`);

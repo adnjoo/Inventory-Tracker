@@ -1,9 +1,12 @@
 import Head from 'next/head';
-import { React, useEffect, useState } from 'react';
+import {
+  React, useEffect, useState,
+} from 'react';
 import axios from 'axios';
 import MyNavBar from './components/MyNavBar.component';
 import MyTable from './components/MyTable.component';
 import AddProduct from './components/AddProduct.component';
+import Download from './components/Download.component';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -34,6 +37,10 @@ export default function Home() {
           <MyTable products={products} getProducts={getProducts} />
           <br />
           <AddProduct getProducts={getProducts} />
+          <br />
+          <br />
+          <Download />
+
         </div>
       </main>
 

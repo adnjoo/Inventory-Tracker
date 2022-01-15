@@ -28,12 +28,12 @@ export default function AddProduct({ getProducts }) {
       <Button style={{ float: 'right' }} onClick={handleShow}>Add a product</Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Add a product</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
           <Form>
-            <h3>Add a product</h3>
+            {/* <h3>Add a product</h3> */}
             <Form.Group className="mb-3" controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control className="w-50" type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />

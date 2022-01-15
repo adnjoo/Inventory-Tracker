@@ -1,3 +1,5 @@
+const copyTo = require('pg-copy-streams').to;
+const fs = require('fs');
 const pool = require('./db');
 
 // Test route
@@ -64,7 +66,6 @@ const editProduct = (req, res) => {
 };
 
 // Delete a product
-
 const deleteProduct = (req, res) => {
   try {
     pool.query('DELETE FROM products WHERE id = $1;', [req.body.id])
@@ -77,6 +78,34 @@ const deleteProduct = (req, res) => {
   }
 };
 
+// Export table
+const downloadProducts = (req, res) => {
+  let data = '';
+  pool.connect((pgErr, client) => {
+    if (pgErr) {
+      // handle error
+      return;
+    }
+    const q = 'COPY products TO STDOUT With CSV HEADER';
+    const stream = client.query(copyTo(q));
+    stream.on('data', (chunk) => {
+      data += chunk;
+    });
+
+    stream.on('end', () => {
+      console.log(data);
+      fs.writeFile('../client/public/products.csv', data, (err) => {
+        if (err) {
+          console.error(err);
+        }
+        // file written successfully
+      });
+      res.status(200).send('file created');
+      client.end();
+    });
+  });
+};
+
 module.exports = {
   testRoute,
   getProducts,
@@ -84,4 +113,5 @@ module.exports = {
   addProduct,
   editProduct,
   deleteProduct,
+  downloadProducts,
 };

@@ -12,6 +12,7 @@ export default function MyTable({ products, getProducts }) {
           <th>Name</th>
           <th>Price</th>
           <th>Quantity</th>
+          <th>Tags</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -29,6 +30,9 @@ export default function MyTable({ products, getProducts }) {
             </td>
             <td>
               {item.quantity}
+            </td>
+            <td>
+              {item.tags}
             </td>
             <td>
               <EditProduct
