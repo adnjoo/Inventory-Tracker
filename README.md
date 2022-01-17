@@ -1,10 +1,26 @@
-# Inventory-Tracker
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/adnjoo/inventory-tracker">
+    <img src="https://raw.githubusercontent.com/adnjoo/Inventory-Tracker/main/client/public/truck.png" alt="Logo" width="80" height="80">
+  </a>
 
-This is an inventory tracking web application for a logistics company.
+  <h2 align="center">Inventory Tracker</h2>
 
-<img src='./scrn1.gif' />
+  <p align="center">
+    This application allows you to track products in your inventory. You can add, remove, and update products. You can also export products into a .csv file. 
+    <br />
+    <br />
+    <br />
+    <!-- <a href="http://divercity.deborahong.com/">Try App</a> -->
+    <!-- <p align="center">Test email: demo@demo </p>
+    <p align="center">Test password: demo </p> -->
+    <!-- <img align='center' width='300' src='./scrn1.gif' /> -->
+  </p>
+</p>
 
-Technologies:
+
+## Built With:
 
 * Next.js
 
