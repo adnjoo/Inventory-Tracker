@@ -12,13 +12,9 @@
     <br />
     <br />
     <br />
-    <!-- <a href="http://divercity.deborahong.com/">Try App</a> -->
-    <!-- <p align="center">Test email: demo@demo </p>
-    <p align="center">Test password: demo </p> -->
-    <!-- <img align='center' width='300' src='./scrn1.gif' /> -->
+
   </p>
 </p>
-
 
 ## Built With:
 
