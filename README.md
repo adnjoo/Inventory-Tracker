@@ -38,7 +38,7 @@ npm install
 npm run dev
 ```
 
-Simulatenously:
+#### Simultaneously:
 
 ```
 cd server
