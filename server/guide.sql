@@ -2,6 +2,10 @@
 
 CREATE USER postgres superuser; 
 
+-- Create database
+
+CREATE DATABASE inventory;
+
 -- Login to postgres db
 
 psql -d inventory

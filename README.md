@@ -38,10 +38,12 @@ npm install
 npm run dev
 ```
 
-Simulatenously:
+#### Simulatenously:
 
 ```
 cd server
 npm install
 nodemon server
 ```
+
+#### Insert data using server/guide.sql and server/inventory.sql as a template.
