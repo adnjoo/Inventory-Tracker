@@ -43,5 +43,5 @@ Simulatenously:
 ```
 cd server
 npm install
-nodemon server.js
+nodemon server
 ```
