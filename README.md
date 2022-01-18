@@ -27,3 +27,21 @@
 * Express
 
 * Cypress (E2E testing)
+
+## Instructions:
+
+```
+git clone https://github.com/adnjoo/inventory-tracker
+cd inventory-tracker
+cd client
+npm install
+npm run dev
+```
+
+Simulatenously:
+
+```
+cd server
+npm install
+nodemon server.js
+```
