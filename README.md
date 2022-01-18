@@ -12,7 +12,7 @@
     <br />
     <br />
     <br />
-
+  <img src='./preview.png'>
   </p>
 </p>
 
