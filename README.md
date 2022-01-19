@@ -28,7 +28,9 @@
 
 * Cypress (E2E testing)
 
-## Instructions:
+# Instructions:
+
+## Front End:
 
 ```
 git clone https://github.com/adnjoo/inventory-tracker
@@ -38,7 +40,7 @@ npm install
 npm run dev
 ```
 
-#### Simultaneously run the following commands:
+## Back End:
 
 ```
 cd server
@@ -46,7 +48,7 @@ npm install
 nodemon server
 ```
 
-## Run tests using the following commands:
+## Run Tests:
 
 ```
 cd client
