@@ -30,6 +30,9 @@ app.delete('/api/deleteproduct', controller.deleteProduct);
 // Export table
 app.get('/api/download', controller.downloadProducts);
 
+// Delete and Insert data
+app.get('/api/resetdata', controller.reset);
+
 // Server listening
 // app.listen(port, () => {
 //   console.log(`Serving on port ${port}`);

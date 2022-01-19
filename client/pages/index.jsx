@@ -7,6 +7,7 @@ import MyNavBar from './components/MyNavBar.component';
 import MyTable from './components/MyTable.component';
 import AddProduct from './components/AddProduct.component';
 import Download from './components/Download.component';
+import Reset from './components/Reset.component';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -40,6 +41,9 @@ export default function Home() {
           <br />
           <br />
           <Download />
+          <br />
+          <br />
+          <Reset getProducts={getProducts} />
 
         </div>
       </main>

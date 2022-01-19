@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import { saveAs } from 'file-saver';
 
@@ -13,6 +14,6 @@ export default function Download() {
     }, 1000);
   };
   return (
-    <button type="button" style={{ float: 'right' }} onClick={exportCSV}>Export table as .csv</button>
+    <Button variant="success" type="button" style={{ float: 'right' }} onClick={exportCSV}>Export table as .csv</Button>
   );
 }
