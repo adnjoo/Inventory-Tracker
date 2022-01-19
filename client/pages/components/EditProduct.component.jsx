@@ -46,15 +46,34 @@ function MyVerticallyCenteredModal(props) {
           <Form>
             <Form.Group className="mb-3" controlId="name">
               <Form.Label>Name</Form.Label>
-              <Form.Control className="w-50" type="text" defaultValue={name} onChange={(e) => setName(e.target.value)} />
+              <Form.Control
+                className="w-50"
+                type="text"
+                defaultValue={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="price">
               <Form.Label>Price</Form.Label>
-              <Form.Control className="w-50" type="number" step="0.01" defaultValue={price} onChange={(e) => setPrice(e.target.value)} />
+              <Form.Control
+                className="w-50"
+                type="number"
+                step="0.01"
+                min="0.01"
+                defaultValue={price}
+                onChange={(e) => setPrice(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="quantity">
               <Form.Label>Quantity</Form.Label>
-              <Form.Control className="w-50" type="number" step="1" defaultValue={quantity} onChange={(e) => setQuantity(e.target.value)} />
+              <Form.Control
+                className="w-50"
+                type="number"
+                step="1"
+                min="1"
+                defaultValue={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+              />
             </Form.Group>
           </Form>
         </div>
