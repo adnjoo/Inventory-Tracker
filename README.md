@@ -64,4 +64,8 @@ cd client
 npm run test
 ```
 
+## DB Model
+
+<img src='./server/db.png'>
+
 #### Insert data using server/guide.sql and server/inventory.sql as a template.
