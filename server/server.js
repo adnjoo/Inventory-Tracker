@@ -31,6 +31,8 @@ app.delete('/api/deleteproduct', controller.deleteProduct);
 app.get('/api/download', controller.downloadProducts);
 
 // Server listening
-app.listen(port, () => {
-  console.log(`Serving on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Serving on port ${port}`);
+// });
+
+module.exports = app;

@@ -26,7 +26,9 @@
 
 * Express
 
-* Cypress (E2E testing)
+* Cypress (E2E testing | Front End)
+
+* Jest (Unit Testing | Back End)
 
 # Instructions:
 
@@ -48,11 +50,18 @@ npm install
 nodemon server
 ```
 
-## Run Tests:
+## Run Tests (Front End):
 
 ```
 cd client
 npm run cypress:run
+```
+
+## Run Tests (Back End):
+
+```
+cd client
+npm run test
 ```
 
 #### Insert data using server/guide.sql and server/inventory.sql as a template.

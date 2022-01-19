@@ -2,5 +2,5 @@
 
 ```
 npm install
-nodemon server
+nodemon start
 ```
