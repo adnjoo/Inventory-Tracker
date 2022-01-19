@@ -70,7 +70,7 @@ function MyVerticallyCenteredModal(props) {
                 className="w-50"
                 type="number"
                 step="1"
-                min="1"
+                min="0"
                 defaultValue={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
               />
