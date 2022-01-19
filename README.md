@@ -46,4 +46,12 @@ npm install
 nodemon server
 ```
 
+## Run tests using the following commands:
+
+```
+cd client
+npm run cypress:run
+nodemon server
+```
+
 #### Insert data using server/guide.sql and server/inventory.sql as a template.
