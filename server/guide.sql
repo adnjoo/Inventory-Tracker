@@ -1,19 +1,17 @@
--- Create postgres superuser
-
-CREATE USER postgres superuser; 
+-- Login to psql
+psql --d postgres
 
 -- Create database
-
 CREATE DATABASE inventory;
 
--- Login to postgres db
+-- Quit postgres database
+\q 
 
-psql -d inventory
+-- Login to inventoy database
+psql -- d inventory 
 
 -- Display tables
-
-\dt
+\dt 
 
 -- Display users
-
 \du
