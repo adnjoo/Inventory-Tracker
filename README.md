@@ -47,7 +47,7 @@ npm run dev
 ```
 cd server
 npm install
-nodemon server
+node start
 ```
 
 ## Run Tests (Front End):
