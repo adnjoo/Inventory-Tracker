@@ -16,4 +16,4 @@ ALTER USER postgres WITH superuser;
 \q
 ```
 
-3. Log back in and create tables using db-schema, insert data
+3. Log back in and create the main tables using instructions (inventory.sql), and insert data.
