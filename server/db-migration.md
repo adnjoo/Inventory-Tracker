@@ -1,6 +1,6 @@
 ## Dependencies
 
-1. Install PostgreSQL, psql
+1. Install PostgreSQL
 
 ```
 brew install libpq
