@@ -26,5 +26,5 @@ psql --d inventory
 
 ```
 npm install
-nodemon start
+node start
 ```
