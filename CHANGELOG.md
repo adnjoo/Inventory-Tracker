@@ -7,3 +7,8 @@
 
 * add additional unit tests
 * add minimum floor to price / quantity in frontend
+
+
+To Do:
+
+* seed database with node | express
