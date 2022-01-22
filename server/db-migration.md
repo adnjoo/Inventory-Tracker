@@ -1,17 +1,18 @@
 ## Dependencies
 
-1. Install PostgreSQL
+1. Install PostgreSQL, psql
 
 ```
-brew install postgresql
+brew install libpq
 ```
 
-2. Login to Postgres and create a database
-
+2. Login to Postgres, create 'inventory' database, create postgres user and grant privileges.
 
 ```
-psql -d postgres
-create database inventory;
+psql --d postgres
+CREATE DATABASE inventory;
+CREATE USER postgres;
+ALTER USER postgres WITH superuser;
 \q
 ```
 
