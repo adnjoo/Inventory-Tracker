@@ -12,7 +12,7 @@
     <br />
     <br />
     <br />
-  <img src='./preview1.png'>
+  <img src='./inventory.gif'>
   </p>
 </p>
 
