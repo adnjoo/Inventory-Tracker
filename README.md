@@ -35,8 +35,8 @@
 ## Front End:
 
 ```
-git clone https://github.com/adnjoo/inventory-tracker
-cd inventory-tracker
+git clone https://github.com/adnjoo/Inventory-Tracker
+cd Inventory-Tracker
 cd client
 npm install
 npm run dev
